@@ -1,6 +1,7 @@
 package Network;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -18,6 +19,7 @@ public class Server {
 
         try {
             server = new ServerSocket(8080);
+            System.out.println(InetAddress.getLocalHost());
             searchForConnection();
 
         } catch (IOException e) {
